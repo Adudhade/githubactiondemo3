@@ -1,0 +1,26 @@
+name: ETL Pipeline Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  etl-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Run extract.py
+        run: python extract.py
+
+      - name: Run transform.py
+        run: python transform.py
+
+      - name: Run load.py
+        run: python load.py
