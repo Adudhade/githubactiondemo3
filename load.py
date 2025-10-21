@@ -1,1 +1,1 @@
-Print("Load data to GCS/ADLS")
+print("Load data to GCS/ADLS")
